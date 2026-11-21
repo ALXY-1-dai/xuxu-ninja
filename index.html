@@ -1068,10 +1068,18 @@
       fitFont('按住拖动，划线切开飞上来的头像', W * 0.9, Math.min(20, W * 0.028), 500);
       ctx.fillStyle = 'rgba(255,255,255,0.55)';
       ctx.fillText('按住拖动，划线切开飞上来的头像', W / 2, H * 0.38 + t1 * 0.95);
+
+      // 两行小提示，别让新人上来就懵
+      ctx.fillStyle = 'rgba(255,255,255,0.34)';
+      fitFont('一刀扫过 3 个以上，这一刀的分数翻倍', W * 0.9, Math.min(15, W * 0.021), 500);
+      ctx.fillText('一刀扫过 3 个以上，这一刀的分数翻倍', W / 2, H * 0.52);
+      fitFont('偶尔冒出「连斩头」：贴着它一直划，别停', W * 0.9, Math.min(15, W * 0.021), 500);
+      ctx.fillText('偶尔冒出「连斩头」：贴着它一直划，别停', W / 2, H * 0.52 + Math.min(26, H * 0.038));
+
       const pulse = 0.55 + 0.45 * Math.sin(performance.now() / 380);
       fitFont('点击开始', W * 0.5, Math.min(24, W * 0.032), 700);
       ctx.fillStyle = 'rgba(255,214,120,' + pulse + ')';
-      ctx.fillText('点击开始', W / 2, H * 0.62);
+      ctx.fillText('点击开始', W / 2, H * 0.64);
     }
 
     if (state === S.OVER) {
